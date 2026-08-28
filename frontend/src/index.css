@@ -1,122 +1,61 @@
 @import "tailwindcss";
 
-* {
-  /* overflow: hidden; */
-}
-
 :root {
-  --bg-primary-color: #f5f6f7;
-  --bg-secondary-color: #c1c4c8;
-  --bg-tertiary-color: #3f2b7b;
-  --text-primary-color: #2b2e33;
+  --color-lime: #b4e87a;
+  --color-lime-light: #ccf1a3;
+  --color-leaf-green: #69aa3c;
+  --color-deep-green: #013920;
+  --color-dark-green: #071d13;
   --text-secondary-color: #626569;
 }
-
-@theme {
-  --font-bricol-med: "bricol-med";
-  --font-bricol-bold: "bricol-bold";
-  --font-bricol-extra-bold: "bricol-extraBold";
-  --font-bricol-regular: "bricol-regular";
-  --font-bricol-light: "bricol-light";
-  --font-neu-semibold: "neu-semibold";
-  --font-neu-black: "neu-black";
+.lime {
+  color: #b4e87a;
+}
+.lime-light {
+  color: #ccf1a3;
+}
+.leaf-green {
+  color: #69aa3c;
+}
+.deep-green {
+  color: #013920;
+}
+.white {
+  color: #ffffff;
 }
 
-@font-face {
-  font-family: "bricol-med";
-  src: url("./assets/fonts/BricolageGrotesque10pt-Medium.otf")
-    format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-/* @font-face {
-  font-family: "bricol-bold";
-  src: url("./assets/fonts/BricolageGrotesque48pt-Bold.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-} */
-@font-face {
-  font-family: "bricol-bold";
-  src: url("./assets/fonts/BricolageGrotesque48pt-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "bricol-extraBold";
-  src: url("./assets/fonts/BricolageGrotesque48ptCondensed-ExtraBold.otf")
-    format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "neu-semibold";
-  src: url("./assets/fonts/neuemetananext-semibold.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "neu-black";
-  src: url("./assets/fonts/neuemetananextoutline-black.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "bricol-regular";
-  src: url("./assets/fonts/BricolageGrotesque10pt-Regular.otf")
-    format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "bricol-light";
-  src: url("./assets/fonts/BricolageGrotesque10pt-Light.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
+.small-heading {
+  color: var(--color-leaf-green);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
 }
 
 h1 {
-  font-size: 50px;
-  line-height: 120%;
-  letter-spacing: 0;
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 70px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "bricol-bold";
+
+.tag-line {
+  width: 100%;
+  max-width: 357px;
 }
 
 p {
-  color: var(--text-secondary-color);
   font-weight: 500;
-  font-family: "bricol-regular";
 }
 
-button {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-  font-family: var(--font-bricol-bold);
+button.deep-green {
+  background-color: var(--color-deep-green);
+  color: #ffffff;
 }
 
-button:hover {
-  transform: translateY(-2px);
+button.white {
+  background-color: #ffffff;
+  color: var(--color-deep-green);
 }
 
-button:active {
-  transform: translateY(1px) scale(0.97);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
-}
-.purple-button:hover {
-  background-color: #2e1f5a;
-}
-.purple-button:active {
-  background-color: #2a1c52;
-}
-.white-button:hover {
-  background-color: #f3f1f8;
-}
-.white-button:active {
-  background-color: #e9e6f1;
+.fw-700 {
+  font-weight: 700;
 }

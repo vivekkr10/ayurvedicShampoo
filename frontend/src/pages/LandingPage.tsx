@@ -1,128 +1,134 @@
 import React from "react";
-import "../index.css";
+import studentProfileImg from "../assets/images/student-img.webp";
+import heroBanner from "../assets/images/hero-banner.webp";
+import "../style/LandingPage.css";
+import whiteArrow from "../assets/images/svg/white-arrow.svg";
+import deepGreenArrow from "../assets/images/svg/deep-green-arrow.svg";
+import graduationCap from "../assets/images/svg/graduation-cap.svg";
+import experience from "../assets/images/svg/experiance.svg";
+import people from "../assets/images/svg/people.svg";
+import book from "../assets/images/svg/book.svg";
+import work from "../assets/images/svg/work.svg";
 
 const LandingPage = () => {
   return (
     <div>
+      {/* hero section  */}
       <section className="hero-section">
+        <div className="big-circle"></div>
+
         <div className="container">
-          <div className="hero-wrap w-full flex flex-row flex-wrap items-center justify-between">
-            <div className="hero-content max-w-112.5 lg:w-full w-full flex flex-col gap-6.5">
-              <p className="!text-[var(--bg-tertiary-color)] !font-extrabold uppercase">
-                Smarter Studying. Powered by AI
+          <div className="hero-wrap">
+            <div className="hero-content">
+              <p className="small-heading">Welcome to Commerce Gyan Academy</p>
+              <h1>Learn. Grow. Lead the Future.</h1>
+              <p className="tag-line">
+                Empowering the students with quality education, industry
+                exposure and a future-ready mindset.
               </p>
-              <h1 className="text-[--text-primary-color] font-bricol-bold">
-                Turn Your Notes <br /> Into Deeper <br />
-                <span className="text-[var(--bg-tertiary-color)]">
-                  Understanding
-                </span>
-              </h1>
-              <p>
-                Create notes, organize your knoweledge, and let AI <br />{" "}
-                summarize, explain, question and turn your material <br /> into
-                flash cards -- all in one intlligent workspace.
-              </p>
-              <div className="hero-btns flex flex-row gap-2.5">
-                <button className="purple-button flex flex-row gap-2.5 rounded-lg py-3.5 px-5 cursor-pointer bg-[var(--bg-tertiary-color)] text-white ">
-                  Start Studying Free
-                  <span className="material-symbols-outlined">
-                    trending_flat
-                  </span>
+              <div className="hero-content-btn">
+                <button className="deep-green">
+                  Explore Courses <img src={whiteArrow} alt="White Arrow" />
                 </button>
-                <button className="white-button border rounded-lg py-3.5 px-5 cursor-pointer">
-                  See How It Works
+                <button className="white">
+                  About Our Institute{" "}
+                  <img src={deepGreenArrow} alt="Deep Green Arrow" />
                 </button>
+              </div>
+              <div className="students-num">
+                <div className="students-img">
+                  <img
+                    className="hero-student-img"
+                    src={studentProfileImg}
+                    alt="Student Image"
+                  />
+                  <img
+                    className="hero-student-img"
+                    src={studentProfileImg}
+                    alt="Student Image"
+                  />
+                  <img
+                    className="hero-student-img"
+                    src={studentProfileImg}
+                    alt="Student Image"
+                  />
+                  <img
+                    className="hero-student-img"
+                    src={studentProfileImg}
+                    alt="Student Image"
+                  />
+                </div>
+                <div className="students-count">
+                  <h5 className="fw-700">5000+ Students</h5>
+                  <p>Trust Commerce Gyan Academy</p>
+                </div>
               </div>
             </div>
-            <div className="hero-banner w-full max-w-180 lg:max-w-150 relative p-10">
-              <div className="hero-banner-cards rounded-2xl flex flex-col max-w-75 w-full shadow-[0_-12px_35px_rgba(0,0,0,0.12),0_12px_30px_rgba(0,0,0,0.10)] py-4 bg-white">
-                <div className="banner-heading flex flex-row justify-between items-center w-full pb-3.5 pl-6 pr-14 pr- border-b border-[#dddddd]">
-                  <p className="text-m">My Notes</p>
-                  <span className="material-symbols-outlined cursor-pointer">
-                    trending_flat
-                  </span>
-                </div>
-                <div className="hero-notes-content flex flex-col gap-6">
-                  <div className="para flex flex-col gap-4 pt-2.5 pl-6 pr-12">
-                    <h2 className="text-xl font-bold">Javascript Closures</h2>
-                    <p className="text-sm">
-                      A closure is combinaition of a function budled
-                      together(enclosed) with reference to its surrounding state
-                      (the laxical envtioment).
-                    </p>
-                  </div>
-                  <div className="para pl-6 pr-12">
-                    <h3 className="text-xl font-bold">Key Points</h3>
-                    <ul className="list-disc pl-3 pt-3.5">
-                      <li>
-                        <p className="text-sm">
-                          A closure gives a function access to its outer scope.
-                        </p>
-                      </li>
-                      <li>
-                        <p className="text-sm">
-                          Closures are commonly used in cllbacks.
-                        </p>
-                      </li>
-                      <li>
-                        <p className="text-sm">
-                          Variables can remain accessable after execution.
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="hero-banner-card-tags flex flex-row gap-2 flex-wrap pl-6 pr-14 ">
-                    <span className="bg-[#dbdbdb91] px-5 py-1 rounded-4xl text-sm">
-                      <p>Javascript</p>
-                    </span>
-                    <span className="bg-[#dbdbdb91] px-5 py-1 rounded-4xl text-sm">
-                      <p>Funcitons</p>
-                    </span>
-                  </div>
-                </div>
+            <div className="hero-banner">
+              <div className="hero-banner-img">
+                <img src={heroBanner} alt="Hero Banner" />
               </div>
-              <div className="hero-banner-cards absolute top-20 left-80 rounded-2xl flex flex-col max-w-75 w-full shadow-[0_-12px_35px_rgba(0,0,0,0.12),0_12px_30px_rgba(0,0,0,0.10)] pt-5 pb-5 bg-white p-6">
-                <div className="banner-heading flex flex-row justify-between items-center pb-5">
-                  <h2 className="text-[20px] font-bold">Ai Summary</h2>
-                  <span className="material-symbols-outlined">bookmark</span>
+              <div className="hero-banner-content">
+                <div className="banner-content-icon">
+                  <img src={graduationCap} alt="" />
                 </div>
-                <div className="hero-notes-content flex flex-col gap-6">
-                  <div className="para">
-                    <p className="text-sm">
-                      Closures allows a function to remember <br /> and access
-                      variables from its laxical <br /> enviroment even the
-                      outer function <br /> has finished executing.
-                    </p>
-                  </div>
-                  <div className="hero-banner-card-tags flex flex-col gap-3">
-                    <h3 className="text-[15px] font-bold">Important Terms</h3>
-                    <div className="hero-banner-card-tags flex flex-row flex-wrap gap-2">
-                      <span className="bg-[#dbdbdb91] px-5 py-1 rounded-4xl text-sm">
-                        Closure
-                      </span>
-                      <span className="bg-[#dbdbdb91] px-5 py-1 rounded-4xl text-sm">
-                        Lexical Scope
-                      </span>
-                      <span className="bg-[#dbdbdb91] px-5 py-1 rounded-4xl text-sm">
-                        Callback
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hero-banner-cards absolute bottom-15 left-90 rotate-355 rounded-2xl border-b-5 border-b-[var(--bg-tertiary-color)] flex flex-col max-w-75 w-full shadow-[0_-12px_35px_rgba(0,0,0,0.12),0_12px_30px_rgba(0,0,0,0.10)] pt-5 pb-7 bg-white p-6">
-                <div className="para">
-                  <ul>
-                    <li className="text-2xl font-bricol-bold">
-                      What does a closure preserve ?
-                    </li>
-                  </ul>
-                </div>
+                <h3 className="banner-content-head">
+                  Shaping Careers <br /> Transforming Lives.
+                </h3>
+                <p className="banner-content-para">
+                  At Commerce Gyan Academy We don't just teach, we inspire and
+                  empower.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      {/* hero section */}
+      {/* stats section  */}
+      <section className="stats-section">
+        <div className="container">
+          <div className="stats-wrapper">
+            <div className="stats">
+              <div className="stat-img">
+                <img src={experience} alt="Experience" />
+              </div>
+              <div className="stats-number">
+                <h3 className="white">5+</h3>
+                <p className="white">Years of Excelience</p>
+              </div>
+            </div>
+            <div className="stats hr-line">
+              <div className="stat-img">
+                <img src={people} alt="Experience" />
+              </div>
+              <div className="stats-number">
+                <h3 className="white">500+</h3>
+                <p className="white">Students Enrolled</p>
+              </div>
+            </div>
+            <div className="stats hr-line">
+              <div className="stat-img">
+                <img src={book} alt="Experience" />
+              </div>
+              <div className="stats-number">
+                <h3 className="white">2+</h3>
+                <p className="white">Expert Faculty</p>
+              </div>
+            </div>
+            <div className="stats hr-line">
+              <div className="stat-img">
+                <img src={work} alt="Experience" />
+              </div>
+              <div className="stats-number">
+                <h3 className="white">200+</h3>
+                <p className="white">Placment Partners</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* stats section  */}
     </div>
   );
 };
