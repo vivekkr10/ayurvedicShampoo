@@ -6,7 +6,26 @@
   --color-leaf-green: #69aa3c;
   --color-deep-green: #013920;
   --color-dark-green: #071d13;
-  --text-secondary-color: #626569;
+  --color-deep-green-black: #010f0b;
+  --color-vanilla-cream: #feebcd;
+}
+@font-face {
+  font-family: "poppinsBold";
+  src: url("./assets/fonts/Poppins-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsMedium";
+  src: url("./assets/fonts/Poppins-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsSemiBold";
+  src: url("./assets/fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 .lime {
   color: #b4e87a;
@@ -23,6 +42,12 @@
 .white {
   color: #ffffff;
 }
+.deep-green-black {
+  color: #010f0b;
+}
+.vanilla-cream {
+  color: #feebcd;
+}
 
 .small-heading {
   color: var(--color-leaf-green);
@@ -35,6 +60,11 @@ h1 {
   font-size: 65px;
   font-weight: 700;
   line-height: 70px;
+}
+h2 {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 50px;
 }
 
 .tag-line {
@@ -58,4 +88,82 @@ button.white {
 
 .fw-700 {
   font-weight: 700;
+}
+
+.btn-bg-white {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 13px 26px;
+  font-weight: 500;
+  font-size: 17px;
+  gap: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 15px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+/* Hover only on devices that actually support hover */
+@media (hover: hover) and (pointer: fine) {
+  .btn-bg-white:hover {
+    /* background-color: #b7ff6a1a; */
+    color: #003d2b;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 0px 10px rgba(0, 61, 43, 0.15);
+  }
+}
+
+/* Click / press effect */
+.btn-bg-white:active {
+  transform: scale(0.96);
+  box-shadow: none;
+  transition: transform 0.08s ease;
+}
+.btn-bg-green {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  padding: 13px 26px;
+  font-weight: 500;
+  font-size: 17px;
+  gap: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 15px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover only on devices that actually support hover */
+@media (hover: hover) and (pointer: fine) {
+  .btn-bg-green:hover {
+    /* background-color: #b7ff6a1a; */
+    /* color: #003d2b; */
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 0px 10px rgba(0, 61, 43, 0.15);
+  }
+}
+
+/* Click / press effect */
+.btn-bg-green:active {
+  transform: scale(0.96);
+  box-shadow: none;
+  transition: transform 0.08s ease;
 }

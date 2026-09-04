@@ -1,7 +1,7 @@
 import React from "react";
 import studentProfileImg from "../assets/images/student-img.webp";
-import heroBanner from "../assets/images/hero-banner.webp";
 import "../style/LandingPage.css";
+import heroBanner from "../assets/images/hero-banner.webp";
 import whiteArrow from "../assets/images/svg/white-arrow.svg";
 import deepGreenArrow from "../assets/images/svg/deep-green-arrow.svg";
 import graduationCap from "../assets/images/svg/graduation-cap.svg";
@@ -9,126 +9,252 @@ import experience from "../assets/images/svg/experiance.svg";
 import people from "../assets/images/svg/people.svg";
 import book from "../assets/images/svg/book.svg";
 import work from "../assets/images/svg/work.svg";
+import program from "../assets/images/svg/Program.svg";
+import dots from "../assets/images/svg/dots.svg";
+import addmission from "../assets/images/svg/addmission.svg";
+import paint from "../assets/images/svg/paint.svg";
+import heart from "../assets/images/svg/Heart.svg";
 
 const LandingPage = () => {
   return (
     <div>
-      {/* hero section  */}
-      <section className="hero-section">
-        <div className="big-circle"></div>
+      <main>
+        {/* hero section  */}
+        <section className="hero-section">
+          <div className="big-circle"></div>
 
-        <div className="container">
-          <div className="hero-wrap">
-            <div className="hero-content">
-              <p className="small-heading">Welcome to Commerce Gyan Academy</p>
-              <h1>Learn. Grow. Lead the Future.</h1>
-              <p className="tag-line">
-                Empowering the students with quality education, industry
-                exposure and a future-ready mindset.
-              </p>
-              <div className="hero-content-btn">
-                <button className="deep-green">
-                  Explore Courses <img src={whiteArrow} alt="White Arrow" />
-                </button>
-                <button className="white">
-                  About Our Institute{" "}
-                  <img src={deepGreenArrow} alt="Deep Green Arrow" />
-                </button>
-              </div>
-              <div className="students-num">
-                <div className="students-img">
-                  <img
-                    className="hero-student-img"
-                    src={studentProfileImg}
-                    alt="Student Image"
-                  />
-                  <img
-                    className="hero-student-img"
-                    src={studentProfileImg}
-                    alt="Student Image"
-                  />
-                  <img
-                    className="hero-student-img"
-                    src={studentProfileImg}
-                    alt="Student Image"
-                  />
-                  <img
-                    className="hero-student-img"
-                    src={studentProfileImg}
-                    alt="Student Image"
-                  />
-                </div>
-                <div className="students-count">
-                  <h5 className="fw-700">5000+ Students</h5>
-                  <p>Trust Commerce Gyan Academy</p>
-                </div>
-              </div>
-            </div>
-            <div className="hero-banner">
-              <div className="hero-banner-img">
-                <img src={heroBanner} alt="Hero Banner" />
-              </div>
-              <div className="hero-banner-content">
-                <div className="banner-content-icon">
-                  <img src={graduationCap} alt="" />
-                </div>
-                <h3 className="banner-content-head">
-                  Shaping Careers <br /> Transforming Lives.
-                </h3>
-                <p className="banner-content-para">
-                  At Commerce Gyan Academy We don't just teach, we inspire and
-                  empower.
+          <div className="container">
+            <div className="hero-wrap">
+              <div className="hero-content">
+                <p className="small-heading">
+                  Welcome to Commerce Gyan Academy
                 </p>
+                <h1 className="deep-green-black">
+                  Learn. Grow. Lead the Future.
+                </h1>
+                <p className="tag-line">
+                  Empowering the students with quality education, industry
+                  exposure and a future-ready mindset.
+                </p>
+                <div className="hero-content-btn">
+                  <button className="deep-green btn-bg-green">
+                    Explore Courses{" "}
+                    <img
+                      className="arrow-img"
+                      src={whiteArrow}
+                      alt="White Arrow"
+                    />
+                  </button>
+                  <button className="white btn-bg-white">
+                    About Our Institute
+                    <img
+                      className="arrow-img"
+                      src={deepGreenArrow}
+                      alt="Deep Green Arrow"
+                    />
+                  </button>
+                </div>
+                <div className="students-num">
+                  <div className="students-img">
+                    <img
+                      className="hero-student-img"
+                      src={studentProfileImg}
+                      alt="Student Image"
+                    />
+                    <img
+                      className="hero-student-img"
+                      src={studentProfileImg}
+                      alt="Student Image"
+                    />
+                    <img
+                      className="hero-student-img"
+                      src={studentProfileImg}
+                      alt="Student Image"
+                    />
+                    <img
+                      className="hero-student-img"
+                      src={studentProfileImg}
+                      alt="Student Image"
+                    />
+                  </div>
+                  <div className="students-count">
+                    <h5 className="fw-700">5000+ Students</h5>
+                    <p>Trust Commerce Gyan Academy</p>
+                  </div>
+                </div>
+              </div>
+              <div className="hero-banner">
+                <div className="hero-banner-img">
+                  <img src={heroBanner} alt="Hero Banner" />
+                </div>
+                <div className="hero-banner-content">
+                  <div className="banner-content-icon">
+                    <img src={graduationCap} alt="" />
+                  </div>
+                  <h3 className="banner-content-head">
+                    Shaping Careers <br /> Transforming Lives.
+                  </h3>
+                  <p className="banner-content-para">
+                    At Commerce Gyan Academy We don't just teach, we inspire and
+                    empower.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* hero section */}
-      {/* stats section  */}
-      <section className="stats-section">
-        <div className="container">
-          <div className="stats-wrapper">
-            <div className="stats">
-              <div className="stat-img">
-                <img src={experience} alt="Experience" />
+        </section>
+        {/* hero section */}
+        {/* stats section  */}
+        <section className="stats-section">
+          <div className="container">
+            <div className="stats-wrapper">
+              <div className="stats">
+                <div className="stat-img">
+                  <img src={experience} alt="Experience" />
+                </div>
+                <div className="stats-number">
+                  <h3 className="white">5+</h3>
+                  <p className="white">Years of Excelience</p>
+                </div>
               </div>
-              <div className="stats-number">
-                <h3 className="white">5+</h3>
-                <p className="white">Years of Excelience</p>
+              <div className="stats hr-line">
+                <div className="stat-img">
+                  <img src={people} alt="Experience" />
+                </div>
+                <div className="stats-number">
+                  <h3 className="white">500+</h3>
+                  <p className="white">Students Enrolled</p>
+                </div>
               </div>
-            </div>
-            <div className="stats hr-line">
-              <div className="stat-img">
-                <img src={people} alt="Experience" />
+              <div className="stats hr-line">
+                <div className="stat-img">
+                  <img src={book} alt="Experience" />
+                </div>
+                <div className="stats-number">
+                  <h3 className="white">2+</h3>
+                  <p className="white">Expert Faculty</p>
+                </div>
               </div>
-              <div className="stats-number">
-                <h3 className="white">500+</h3>
-                <p className="white">Students Enrolled</p>
-              </div>
-            </div>
-            <div className="stats hr-line">
-              <div className="stat-img">
-                <img src={book} alt="Experience" />
-              </div>
-              <div className="stats-number">
-                <h3 className="white">2+</h3>
-                <p className="white">Expert Faculty</p>
-              </div>
-            </div>
-            <div className="stats hr-line">
-              <div className="stat-img">
-                <img src={work} alt="Experience" />
-              </div>
-              <div className="stats-number">
-                <h3 className="white">200+</h3>
-                <p className="white">Placment Partners</p>
+              <div className="stats hr-line">
+                <div className="stat-img">
+                  <img src={work} alt="Experience" />
+                </div>
+                <div className="stats-number">
+                  <h3 className="white">200+</h3>
+                  <p className="white">Placment Partners</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      {/* stats section  */}
+        </section>
+        {/* stats section  */}
+        {/* our program section  */}
+        <section className="our-program">
+          <div className="container">
+            <div className="our-program-wrapp">
+              <p className="small-heading">Our Programs</p>
+              <div className="our-programs-heading">
+                <h2 className="deep-green-black">Explort Our Top Programs</h2>
+                <button className="view-more-btn btn-bg-white">
+                  View More
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 6.00003H11"
+                      stroke="#010F0B"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M7 1.00003L11 6.00003"
+                      stroke="#010F0B"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M7 11L11 6.00003"
+                      stroke="#010F0B"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div className="program-card-wrapper">
+                <div className="programs-card">
+                  <div className="program-card-img">
+                    <img src={program} alt="Program icon" />
+                  </div>
+                  <h3 className="card-heading fw-700 white">
+                    B.Tech in Computer Science
+                  </h3>
+                  <p className="white program-card-para">
+                    Build a strong foundation in computing and technology.
+                  </p>
+                  <button>
+                    Learn More
+                    <img src={whiteArrow} alt="" />
+                  </button>
+                  <img className="card-dots" src={dots} alt="dots" />
+                </div>
+                <div className="programs-card">
+                  <div className="program-card-img">
+                    <img src={addmission} alt="Program icon" />
+                  </div>
+                  <h3 className="card-heading fw-700 white">
+                    B.Tech in Computer Science
+                  </h3>
+                  <p className="white program-card-para">
+                    Build a strong foundation in computing and technology.
+                  </p>
+                  <button>
+                    Learn More
+                    <img src={whiteArrow} alt="" />
+                  </button>
+                  <img className="card-dots" src={dots} alt="dots" />
+                </div>
+                <div className="programs-card">
+                  <div className="program-card-img">
+                    <img src={paint} alt="Program icon" />
+                  </div>
+                  <h3 className="card-heading fw-700 white">
+                    B.Tech in Computer Science
+                  </h3>
+                  <p className="white program-card-para">
+                    Build a strong foundation in computing and technology.
+                  </p>
+                  <button>
+                    Learn More
+                    <img src={deepGreenArrow} alt="" />
+                  </button>
+                  <img className="card-dots" src={dots} alt="dots" />
+                </div>
+                <div className="programs-card">
+                  <div className="program-card-img">
+                    <img src={heart} alt="Program icon" />
+                  </div>
+                  <h3 className="card-heading fw-700 white">
+                    B.Tech in Computer Science
+                  </h3>
+                  <p className="white program-card-para">
+                    Build a strong foundation in computing and technology.
+                  </p>
+                  <button>
+                    Learn More
+                    <img src={whiteArrow} alt="" />
+                  </button>
+                  <img className="card-dots" src={dots} alt="dots" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };
