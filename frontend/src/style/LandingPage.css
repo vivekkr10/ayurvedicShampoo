@@ -295,9 +295,74 @@
   top: 31px;
   right: 22px;
 }
+/* =================================
+   Benifits
+================================= */
 
+/* =================================
+   Benefits
+================================= */
 
+.benifits-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
 
+  width: 100%;
+  padding: 30px 22px;
+
+  border-radius: 20px;
+  background-color: #f3f3e3;
+
+  margin-top: clamp(20px, 5vw, 40px);
+}
+
+.benifit {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+  /* padding: 0 20px; */
+}
+
+.benifit-icon {
+  flex: 0 0 auto;
+
+  width: 56px;
+  height: 56px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background-color: var(--color-lime-light);
+}
+
+.benifit-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.benifit-content {
+  min-width: 0;
+}
+
+/* .benifit-content h4 {
+  margin: 0 0 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+} */
+
+.benifit-content p {
+  margin: 0;
+
+  /* font-size: 13px; */
+  line-height: 1.55;
+  color: #333;
+}
 /* =================================
    Responsive
 ================================= */
@@ -325,6 +390,11 @@
 
   .program-card-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benifits-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
 
@@ -372,6 +442,9 @@
     align-items: flex-start;
     flex-direction: column;
   }
+  .benifits-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media (max-width: 480px) {
@@ -403,5 +476,13 @@
 
   .programs-card {
     padding: 20px;
+  }
+  .benifit-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .benifit-icon img {
+    width: 24px;
+    height: 24px;
   }
 }

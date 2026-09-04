@@ -8,12 +8,16 @@ import graduationCap from "../assets/images/svg/graduation-cap.svg";
 import experience from "../assets/images/svg/experiance.svg";
 import people from "../assets/images/svg/people.svg";
 import book from "../assets/images/svg/book.svg";
+import darkbook from "../assets/images/svg/darkbook.svg";
 import passed from "../assets/images/svg/passed.svg";
 import program from "../assets/images/svg/Program.svg";
 import dots from "../assets/images/svg/dots.svg";
 import addmission from "../assets/images/svg/addmission.svg";
 import paint from "../assets/images/svg/paint.svg";
 import heart from "../assets/images/svg/Heart.svg";
+import tests from "../assets/images/svg/tests.svg";
+import doubt from "../assets/images/svg/doubt.svg";
+import personalAttention from "../assets/images/svg/personal-attention.svg";
 
 const LandingPage = () => {
   return (
@@ -81,7 +85,7 @@ const LandingPage = () => {
                     />
                   </div>
                   <div className="students-count">
-                    <h5 className="fw-700">100+ Happy Students</h5>
+                    <h4 className="fw-700">100+ Happy Students</h4>
                     <p>Trust Commerce Gyan Academy</p>
                   </div>
                 </div>
@@ -250,6 +254,44 @@ const LandingPage = () => {
                     <img src={whiteArrow} alt="" />
                   </button>
                   <img className="card-dots" src={dots} alt="dots" />
+                </div>
+              </div>
+              <div className="benifits-wrapper">
+                <div className="benifit">
+                  <div className="benifit-icon">
+                    <img src={tests} alt="Regular Tests" />
+                  </div>
+                  <div className="benifit-content">
+                    <h4>Regular Tests</h4>
+                    <p>Weekly tests and monthely assesments.</p>
+                  </div>
+                </div>
+                <div className="benifit">
+                  <div className="benifit-icon">
+                    <img src={doubt} alt="Regular Tests" />
+                  </div>
+                  <div className="benifit-content">
+                    <h4>Doubt Sessions</h4>
+                    <p>Clear your doubts and strengthen concepts.</p>
+                  </div>
+                </div>
+                <div className="benifit">
+                  <div className="benifit-icon">
+                    <img src={darkbook} alt="Regular Tests" />
+                  </div>
+                  <div className="benifit-content">
+                    <h4>Homework Assistance</h4>
+                    <p>Timely homework support and regular checking.</p>
+                  </div>
+                </div>
+                <div className="benifit">
+                  <div className="benifit-icon">
+                    <img src={personalAttention} alt="Regular Tests" />
+                  </div>
+                  <div className="benifit-content">
+                    <h4>Personal Attention</h4>
+                    <p>Focus on every student's strength and weakness.</p>
+                  </div>
                 </div>
               </div>
             </div>
