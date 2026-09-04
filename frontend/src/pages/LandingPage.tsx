@@ -8,7 +8,7 @@ import graduationCap from "../assets/images/svg/graduation-cap.svg";
 import experience from "../assets/images/svg/experiance.svg";
 import people from "../assets/images/svg/people.svg";
 import book from "../assets/images/svg/book.svg";
-import work from "../assets/images/svg/work.svg";
+import passed from "../assets/images/svg/passed.svg";
 import program from "../assets/images/svg/Program.svg";
 import dots from "../assets/images/svg/dots.svg";
 import addmission from "../assets/images/svg/addmission.svg";
@@ -30,11 +30,14 @@ const LandingPage = () => {
                   Welcome to Commerce Gyan Academy
                 </p>
                 <h1 className="deep-green-black">
-                  Learn. Grow. Lead the Future.
+                  Learn Today.
+                  <span className="leaf-green"> Lead Tomorrow.</span>
                 </h1>
                 <p className="tag-line">
-                  Empowering the students with quality education, industry
-                  exposure and a future-ready mindset.
+                  A trusted tuition center in Faridabad, providing quality
+                  education from class 1 to 12 in all subject. <br />
+                  In our guidance,{" "}
+                  <span className="leaf-green">no one has ever failed.</span>
                 </p>
                 <div className="hero-content-btn">
                   <button className="deep-green btn-bg-green">
@@ -78,7 +81,7 @@ const LandingPage = () => {
                     />
                   </div>
                   <div className="students-count">
-                    <h5 className="fw-700">5000+ Students</h5>
+                    <h5 className="fw-700">100+ Happy Students</h5>
                     <p>Trust Commerce Gyan Academy</p>
                   </div>
                 </div>
@@ -91,12 +94,10 @@ const LandingPage = () => {
                   <div className="banner-content-icon">
                     <img src={graduationCap} alt="" />
                   </div>
-                  <h3 className="banner-content-head">
-                    Shaping Careers <br /> Transforming Lives.
-                  </h3>
+                  <h3 className="banner-content-head">Our Mission</h3>
                   <p className="banner-content-para">
-                    At Commerce Gyan Academy We don't just teach, we inspire and
-                    empower.
+                    Empowering every student with the right guidance, personal
+                    attention and love for learning.
                   </p>
                 </div>
               </div>
@@ -137,11 +138,11 @@ const LandingPage = () => {
               </div>
               <div className="stats hr-line">
                 <div className="stat-img">
-                  <img src={work} alt="Experience" />
+                  <img src={passed} alt="Experience" />
                 </div>
                 <div className="stats-number">
-                  <h3 className="white">200+</h3>
-                  <p className="white">Placment Partners</p>
+                  <h3 className="white">100%</h3>
+                  <p className="white">Students Passed</p>
                 </div>
               </div>
             </div>

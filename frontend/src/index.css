@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* ==============================
+   Variables
+================================= */
+
 :root {
   --color-lime: #b4e87a;
   --color-lime-light: #ccf1a3;
@@ -8,162 +12,214 @@
   --color-dark-green: #071d13;
   --color-deep-green-black: #010f0b;
   --color-vanilla-cream: #feebcd;
+
+  --section-gap: clamp(60px, 8vw, 100px);
 }
+
+/* ==============================
+   Fonts
+================================= */
+
 @font-face {
-  font-family: "poppinsBold";
-  src: url("./assets/fonts/Poppins-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "poppinsMedium";
+  font-family: Poppins;
   src: url("./assets/fonts/Poppins-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 500;
 }
+
 @font-face {
-  font-family: "poppinsSemiBold";
+  font-family: Poppins;
   src: url("./assets/fonts/Poppins-SemiBold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-weight: 600;
 }
-.lime {
-  color: #b4e87a;
+
+@font-face {
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
 }
-.lime-light {
-  color: #ccf1a3;
+
+/* ==============================
+   Base
+================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.leaf-green {
-  color: #69aa3c;
+
+html {
+  scroll-behavior: smooth;
 }
-.deep-green {
-  color: #013920;
+
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
 }
-.white {
-  color: #ffffff;
+
+img {
+  display: block;
+  max-width: 100%;
 }
-.deep-green-black {
-  color: #010f0b;
+
+button {
+  font: inherit;
 }
-.vanilla-cream {
-  color: #feebcd;
+
+/* ==============================
+   Typography
+================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1.08;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(32px, 3.5vw, 45px);
+  line-height: 1.12;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: clamp(16px, 1.5vw, 18px);
+  line-height: 1.3;
+}
+
+p {
+  font-size: clamp(14px, 1.2vw, 16px);
 }
 
 .small-heading {
   color: var(--color-leaf-green);
+  font-size: clamp(13px, 1.2vw, 16px);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.5px;
 }
 
-h1 {
-  font-size: 65px;
-  font-weight: 700;
-  line-height: 70px;
-}
-h2 {
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 50px;
-}
-
 .tag-line {
-  width: 100%;
   max-width: 357px;
 }
 
-p {
-  font-weight: 500;
+/* ==============================
+   Colors
+================================= */
+
+.lime {
+  color: var(--color-lime);
 }
 
-button.deep-green {
-  background-color: var(--color-deep-green);
-  color: #ffffff;
+.lime-light {
+  color: var(--color-lime-light);
 }
 
-button.white {
-  background-color: #ffffff;
+.leaf-green {
+  color: var(--color-leaf-green);
+}
+
+.deep-green {
   color: var(--color-deep-green);
+}
+
+.deep-green-black {
+  color: var(--color-deep-green-black);
+}
+
+.vanilla-cream {
+  color: var(--color-vanilla-cream);
+}
+
+.white {
+  color: #fff;
 }
 
 .fw-700 {
   font-weight: 700;
 }
 
-.btn-bg-white {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  padding: 13px 26px;
-  font-weight: 500;
-  font-size: 17px;
-  gap: 16px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 15px;
-  overflow: hidden;
-  transition:
-    transform 0.2s ease-in-out,
-    background-color 0.2s ease-in-out,
-    color 0.2s ease-in-out,
-    box-shadow 0.2s ease-in-out;
-}
+/* ==============================
+   Buttons
+================================= */
 
-/* Hover only on devices that actually support hover */
-@media (hover: hover) and (pointer: fine) {
-  .btn-bg-white:hover {
-    /* background-color: #b7ff6a1a; */
-    color: #003d2b;
-
-    transform: translateY(-1px);
-
-    box-shadow: 0 0px 10px rgba(0, 61, 43, 0.15);
-  }
-}
-
-/* Click / press effect */
-.btn-bg-white:active {
-  transform: scale(0.96);
-  box-shadow: none;
-  transition: transform 0.08s ease;
-}
+.btn-bg-white,
 .btn-bg-green {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  white-space: nowrap;
+  justify-content: center;
+  gap: 12px;
   padding: 13px 26px;
-  font-weight: 500;
-  font-size: 17px;
-  gap: 16px;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  border: 0;
   border-radius: 15px;
+  font-size: clamp(14px, 1.2vw, 17px);
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
-/* Hover only on devices that actually support hover */
+.btn-bg-green {
+  background-color: var(--color-deep-green);
+  color: #fff;
+}
+
+.btn-bg-white {
+  background-color: #fff;
+  color: var(--color-deep-green);
+}
+
+.btn-bg-white:active,
+.btn-bg-green:active {
+  transform: scale(0.96);
+}
+
 @media (hover: hover) and (pointer: fine) {
+  .btn-bg-white:hover,
   .btn-bg-green:hover {
-    /* background-color: #b7ff6a1a; */
-    /* color: #003d2b; */
-
     transform: translateY(-1px);
-
-    box-shadow: 0 0px 10px rgba(0, 61, 43, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 61, 43, 0.15);
   }
 }
 
-/* Click / press effect */
-.btn-bg-green:active {
-  transform: scale(0.96);
-  box-shadow: none;
-  transition: transform 0.08s ease;
+/* ==============================
+   Responsive
+================================= */
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 30px, var(--container-width));
+  }
+
+  .btn-bg-white,
+  .btn-bg-green {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 24px, var(--container-width));
+  }
 }
