@@ -3,12 +3,16 @@
 ================================= */
 
 .hero-section {
+  background-color: #010705;
+  padding-top: 91px;
+}
+.hero-wrapper {
   position: relative;
   padding-bottom: 60px;
   overflow: hidden;
   background: var(--color-lime);
+  border-radius: 50px 50px 0 0;
 }
-
 .big-circle {
   position: absolute;
   top: -660px;
@@ -207,6 +211,7 @@
 
 .our-program {
   padding-block: var(--section-gap);
+  background-color: #ffffff;
 }
 
 .our-program-wrapp {
