@@ -28,84 +28,86 @@ const LandingPage = () => {
       <main>
         {/* hero section  */}
         <section className="hero-section">
-          <div className="big-circle"></div>
+          <div className="hero-wrapper">
+            <div className="big-circle"></div>
 
-          <div className="container">
-            <div className="hero-wrap">
-              <div className="hero-content">
-                <p className="small-heading">
-                  Welcome to Commerce Gyan Academy
-                </p>
-                <h1 className="deep-green-black">
-                  Learn Today.
-                  <span className="leaf-green"> Lead Tomorrow.</span>
-                </h1>
-                <p className="tag-line">
-                  A trusted tuition center in Faridabad, providing quality
-                  education from class 1 to 12 in all subject. <br />
-                  In our guidance,{" "}
-                  <span className="leaf-green">no one has ever failed.</span>
-                </p>
-                <div className="hero-content-btn">
-                  <button className="deep-green btn-bg-green">
-                    Explore Courses{" "}
-                    <img
-                      className="arrow-img"
-                      src={whiteArrow}
-                      alt="White Arrow"
-                    />
-                  </button>
-                  <button className="white btn-bg-white">
-                    About Our Institute
-                    <img
-                      className="arrow-img"
-                      src={deepGreenArrow}
-                      alt="Deep Green Arrow"
-                    />
-                  </button>
-                </div>
-                <div className="students-num">
-                  <div className="students-img">
-                    <img
-                      className="hero-student-img"
-                      src={studentProfileImg}
-                      alt="Student Image"
-                    />
-                    <img
-                      className="hero-student-img"
-                      src={studentProfileImg}
-                      alt="Student Image"
-                    />
-                    <img
-                      className="hero-student-img"
-                      src={studentProfileImg}
-                      alt="Student Image"
-                    />
-                    <img
-                      className="hero-student-img"
-                      src={studentProfileImg}
-                      alt="Student Image"
-                    />
-                  </div>
-                  <div className="students-count">
-                    <h4 className="fw-700">100+ Happy Students</h4>
-                    <p>Trust Commerce Gyan Academy</p>
-                  </div>
-                </div>
-              </div>
-              <div className="hero-banner">
-                <div className="hero-banner-img">
-                  <img src={heroBanner} alt="Hero Banner" />
-                </div>
-                <div className="hero-banner-content">
-                  <div className="banner-content-icon">
-                    <img src={graduationCap} alt="" />
-                  </div>
-                  <h3 className="banner-content-head">Our Mission</h3>
-                  <p className="banner-content-para">
-                    Empowering every student with the right guidance, personal
-                    attention and love for learning.
+            <div className="container">
+              <div className="hero-wrap">
+                <div className="hero-content">
+                  <p className="small-heading">
+                    Welcome to Commerce Gyan Academy
                   </p>
+                  <h1 className="deep-green-black">
+                    Learn Today.
+                    <span className="leaf-green"> Lead Tomorrow.</span>
+                  </h1>
+                  <p className="tag-line">
+                    A trusted tuition center in Faridabad, providing quality
+                    education from class 1 to 12 in all subject. <br />
+                    In our guidance,{" "}
+                    <span className="leaf-green">no one has ever failed.</span>
+                  </p>
+                  <div className="hero-content-btn">
+                    <button className="deep-green btn-bg-green">
+                      Explore Courses{" "}
+                      <img
+                        className="arrow-img"
+                        src={whiteArrow}
+                        alt="White Arrow"
+                      />
+                    </button>
+                    <button className="white btn-bg-white">
+                      About Our Institute
+                      <img
+                        className="arrow-img"
+                        src={deepGreenArrow}
+                        alt="Deep Green Arrow"
+                      />
+                    </button>
+                  </div>
+                  <div className="students-num">
+                    <div className="students-img">
+                      <img
+                        className="hero-student-img"
+                        src={studentProfileImg}
+                        alt="Student Image"
+                      />
+                      <img
+                        className="hero-student-img"
+                        src={studentProfileImg}
+                        alt="Student Image"
+                      />
+                      <img
+                        className="hero-student-img"
+                        src={studentProfileImg}
+                        alt="Student Image"
+                      />
+                      <img
+                        className="hero-student-img"
+                        src={studentProfileImg}
+                        alt="Student Image"
+                      />
+                    </div>
+                    <div className="students-count">
+                      <h4 className="fw-700">100+ Happy Students</h4>
+                      <p>Trust Commerce Gyan Academy</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="hero-banner">
+                  <div className="hero-banner-img">
+                    <img src={heroBanner} alt="Hero Banner" />
+                  </div>
+                  <div className="hero-banner-content">
+                    <div className="banner-content-icon">
+                      <img src={graduationCap} alt="" />
+                    </div>
+                    <h3 className="banner-content-head">Our Mission</h3>
+                    <p className="banner-content-para">
+                      Empowering every student with the right guidance, personal
+                      attention and love for learning.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

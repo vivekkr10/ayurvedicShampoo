@@ -9,6 +9,7 @@
   --color-lime-light: #ccf1a3;
   --color-leaf-green: #69aa3c;
   --color-deep-green: #013920;
+  --color-deep-sea-green: #21724d;
   --color-dark-green: #071d13;
   --color-deep-green-black: #010f0b;
   --color-vanilla-cream: #feebcd;
@@ -124,6 +125,10 @@ p {
   max-width: 357px;
 }
 
+.logo-text {
+  font-size: 25px;
+}
+
 /* ==============================
    Colors
 ================================= */
@@ -142,6 +147,10 @@ p {
 
 .deep-green {
   color: var(--color-deep-green);
+}
+
+.deep-sea-green {
+  color: var(--color-deep-sea-green);
 }
 
 .deep-green-black {

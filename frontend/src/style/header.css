@@ -1,0 +1,92 @@
+.header {
+  background-color: #010705;
+  padding: 10px 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-btns ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.nav-btns ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-btns ul li a:hover {
+  color: var(--color-lime);
+}
+
+.nav-register-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #000;
+  background-color: var(--color-lime);
+
+  padding: 14px 20px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  isolation: isolate;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-register-btn::after {
+  content: "";
+  position: absolute;
+
+  inset: 0;
+
+  background-color: #3f7717;
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.3s ease-in-out;
+
+  z-index: -1;
+}
+
+.nav-register-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* 
+.nav-register-btn:active {
+  transform: scale(0.96);
+  transition-duration: 1s;
+} */
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-register-btn:hover {
+    color: #ffffff;
+  }
+}
