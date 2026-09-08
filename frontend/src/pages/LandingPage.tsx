@@ -18,6 +18,9 @@ import heart from "../assets/images/svg/Heart.svg";
 import tests from "../assets/images/svg/tests.svg";
 import doubt from "../assets/images/svg/doubt.svg";
 import personalAttention from "../assets/images/svg/personal-attention.svg";
+import lifeAtCga1 from "../assets/images/life-at-cga1.webp";
+import lifeAtCga2 from "../assets/images/life-at-cga2.webp";
+import lifeAtCga3 from "../assets/images/life-at-cga3.webp";
 
 const LandingPage = () => {
   return (
@@ -195,11 +198,10 @@ const LandingPage = () => {
                   <div className="program-card-img">
                     <img src={program} alt="Program icon" />
                   </div>
-                  <h3 className="card-heading fw-700 white">
-                    B.Tech in Computer Science
-                  </h3>
+                  <h3 className="card-heading fw-700 white">Class 1 - 5</h3>
                   <p className="white program-card-para">
-                    Build a strong foundation in computing and technology.
+                    Foundation learning in Mathematics, English, Hindi, EVS &
+                    more.
                   </p>
                   <button>
                     Learn More
@@ -211,11 +213,10 @@ const LandingPage = () => {
                   <div className="program-card-img">
                     <img src={addmission} alt="Program icon" />
                   </div>
-                  <h3 className="card-heading fw-700 white">
-                    B.Tech in Computer Science
-                  </h3>
+                  <h3 className="card-heading fw-700 white">Class 6 - 8</h3>
                   <p className="white program-card-para">
-                    Build a strong foundation in computing and technology.
+                    Complete academic support across Mathematics, Science,
+                    Social Science, English & Hindi.
                   </p>
                   <button>
                     Learn More
@@ -227,11 +228,10 @@ const LandingPage = () => {
                   <div className="program-card-img">
                     <img src={paint} alt="Program icon" />
                   </div>
-                  <h3 className="card-heading fw-700 white">
-                    B.Tech in Computer Science
-                  </h3>
+                  <h3 className="card-heading fw-700 white">Class 9 - 10</h3>
                   <p className="white program-card-para">
-                    Build a strong foundation in computing and technology.
+                    Focused preparation for school exams and board-level
+                    fundamentals.
                   </p>
                   <button>
                     Learn More
@@ -244,10 +244,11 @@ const LandingPage = () => {
                     <img src={heart} alt="Program icon" />
                   </div>
                   <h3 className="card-heading fw-700 white">
-                    B.Tech in Computer Science
+                    Class 11 - 12 — Commerce
                   </h3>
                   <p className="white program-card-para">
-                    Build a strong foundation in computing and technology.
+                    Accounts, Economics, Business Studies, Mathematics &
+                    English.
                   </p>
                   <button>
                     Learn More
@@ -291,6 +292,130 @@ const LandingPage = () => {
                   <div className="benifit-content">
                     <h4>Personal Attention</h4>
                     <p>Focus on every student's strength and weakness.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* =================================
+    Life at CGA + Testimonial
+================================= */}
+        <section className="cga">
+          <div className="container">
+            <div className="cga-wrapper">
+              {/* ==============================
+          Life at CGA
+      ============================== */}
+              <div className="life-at-cga">
+                <div className="life-at-cga-content">
+                  <p className="small-heading">Life at Commerce Gyan Academy</p>
+
+                  <h2 className="deep-green-black">
+                    More Than Just
+                    <br />
+                    Tuition Classes.
+                  </h2>
+
+                  <p className="life-at-cga-para opacity">
+                    We create a supportive learning environment where students
+                    can learn confidently, clear their doubts, and grow with
+                    personal attention.
+                  </p>
+
+                  <button className="btn-bg-green">
+                    Discover Our Approach
+                    <img src={whiteArrow} alt="" />
+                  </button>
+                </div>
+
+                {/* ==============================
+            Image Collage
+        ============================== */}
+                <div className="tuition-banner">
+                  <div className="tuition-img">
+                    <div className="two-image">
+                      <div className="cga-image">
+                        <img
+                          src={lifeAtCga1}
+                          alt="Students enjoying campus life"
+                        />
+                      </div>
+
+                      <div className="cga-image">
+                        <img
+                          src={lifeAtCga2}
+                          alt="Students playing basketball"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="cga-image cga-image-large">
+                      <img
+                        src={lifeAtCga3}
+                        alt="Students together at Commerce Gyan Academy"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Floating icon */}
+                  <div className="cga-floating-icon">
+                    <img src={people} alt="" />
+                  </div>
+                </div>
+              </div>
+
+              {/* ==============================
+          Divider
+      ============================== */}
+              <div className="cga-divider"></div>
+
+              {/* ==============================
+          Testimonial
+      ============================== */}
+              <div className="student-testimonial">
+                <p className="small-heading">What Students Say</p>
+
+                <h2 className="deep-green-black">
+                  Voices of Our
+                  <br />
+                  Students
+                </h2>
+
+                <div className="testimonial-content">
+                  <span className="testimonial-quote">“</span>
+
+                  <p>
+                    Commerce Gyan Academy has given me the confidence, knowledge
+                    and exposure to chase my dreams.
+                  </p>
+                </div>
+
+                <div className="testimonial-student">
+                  <img src={studentProfileImg} alt="Student" />
+
+                  <div>
+                    <h4>Ananya Sharma</h4>
+                    <p>B.Tech CSE, Final Year</p>
+                  </div>
+                </div>
+
+                <div className="testimonial-bottom">
+                  <div className="testimonial-dots">
+                    <span></span>
+                    <span></span>
+                    <span className="active"></span>
+                    <span></span>
+                  </div>
+
+                  <div className="testimonial-arrows">
+                    <button aria-label="Previous testimonial">
+                      <span>←</span>
+                    </button>
+
+                    <button aria-label="Next testimonial">
+                      <span>→</span>
+                    </button>
                   </div>
                 </div>
               </div>
