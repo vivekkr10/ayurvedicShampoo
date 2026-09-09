@@ -1,10 +1,10 @@
 <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M14 1H3.5C2.94772 1 2.5 1.44772 2.5 2V14.5C2.5 15.0523 2.94772 15.5 3.5 15.5H14" stroke="#013920" stroke-width="2" stroke-linecap="round"/>
-<path d="M14 1H24.5C25.0523 1 25.5 1.44772 25.5 2V14.5C25.5 15.0523 25.0523 15.5 24.5 15.5H14" stroke="#013920" stroke-width="2" stroke-linecap="round"/>
-<path d="M14 18C14 18 4.5 18 3 18C1.5 18 1 19 1 20C1 20.4592 1 21.0238 1 21.5002C1 22.0525 1.44772 22.5 2 22.5H14" stroke="#013920" stroke-width="2" stroke-linecap="round"/>
-<path d="M14 18C14 18 23.5 18 25 18C26.5 18 27 19 27 20C27 20.4592 27 21.0238 27 21.5002C27 22.0525 26.5523 22.5 26 22.5H14" stroke="#013920" stroke-width="2" stroke-linecap="round"/>
-<path d="M11 18.5V22" stroke="#013920" stroke-width="2" stroke-linecap="round"/>
-<path d="M17 18.5V22" stroke="#013920" stroke-width="2" stroke-linecap="round"/>
-<path d="M14 4.5C11.5 5.5 11.5 9.5 14 10" stroke="#013920" stroke-width="2" stroke-linecap="round"/>
-<path d="M14 4.5C16.5 5.5 16.5 9.5 14 10" stroke="#013920" stroke-width="2" stroke-linecap="round"/>
+<path d="M14 1H3.5C2.94772 1 2.5 1.44772 2.5 2V14.5C2.5 15.0523 2.94772 15.5 3.5 15.5H14" stroke="#013920" strokeWidth="4" strokeLinecap="round"/>
+<path d="M14 1H24.5C25.0523 1 25.5 1.44772 25.5 2V14.5C25.5 15.0523 25.0523 15.5 24.5 15.5H14" stroke="#013920" strokeWidth="4" strokeLinecap="round"/>
+<path d="M14 18C14 18 4.5 18 3 18C1.5 18 1 19 1 20C1 20.4592 1 21.0238 1 21.5002C1 22.0525 1.44772 22.5 2 22.5H14" stroke="#013920" strokeWidth="4" strokeLinecap="round"/>
+<path d="M14 18C14 18 23.5 18 25 18C26.5 18 27 19 27 20C27 20.4592 27 21.0238 27 21.5002C27 22.0525 26.5523 22.5 26 22.5H14" stroke="#013920" strokeWidth="4" strokeLinecap="round"/>
+<path d="M11 18.5V22" stroke="#013920" strokeWidth="4" strokeLinecap="round"/>
+<path d="M17 18.5V22" stroke="#013920" strokeWidth="4" strokeLinecap="round"/>
+<path d="M14 4.5C11.5 5.5 11.5 9.5 14 10" stroke="#013920" strokeWidth="4" strokeLinecap="round"/>
+<path d="M14 4.5C16.5 5.5 16.5 9.5 14 10" stroke="#013920" strokeWidth="4" strokeLinecap="round"/>
 </svg>

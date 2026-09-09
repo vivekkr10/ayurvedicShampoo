@@ -55,7 +55,7 @@ export const register = async (req: Request, res: Response) => {
       studentClass,
       stream,
       location,
-      role,
+      role: role || "student",
     });
 
     //Generate Token

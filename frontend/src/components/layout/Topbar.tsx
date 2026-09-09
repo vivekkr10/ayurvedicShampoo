@@ -1,5 +1,6 @@
 import PageHeader from "../common/PageHeader";
 import { Outlet } from "react-router-dom";
+import { Toaster } from "sonner";
 
 const Topbar = () => {
   return (
@@ -9,6 +10,8 @@ const Topbar = () => {
       <main>
         <Outlet />
       </main>
+
+      <Toaster position="bottom-center"/>
     </div>
   );
 };

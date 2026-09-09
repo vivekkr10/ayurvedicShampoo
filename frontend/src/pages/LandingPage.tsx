@@ -177,20 +177,20 @@ const LandingPage = () => {
                     <path
                       d="M1 6.00003H11"
                       stroke="#010F0B"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="4"
+                      strokeLinecap="round"
                     />
                     <path
                       d="M7 1.00003L11 6.00003"
                       stroke="#010F0B"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="4"
+                      strokeLinecap="round"
                     />
                     <path
                       d="M7 11L11 6.00003"
                       stroke="#010F0B"
-                      stroke-width="2"
-                      stroke-linecap="round"
+                      strokeWidth="4"
+                      strokeLinecap="round"
                     />
                   </svg>
                 </button>

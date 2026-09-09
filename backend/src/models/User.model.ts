@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 enum UserRole {
-  USER = "user",
+  USER = "student",
   ADMIN = "admin",
   TEACHER = "teacher",
   SUPERADMIN = "superAdmin",
