@@ -24,8 +24,11 @@ export const register = async (req: Request, res: Response) => {
         message: "Name, email, password, class and stream are required.",
       });
     }
+
+    // Normalize email
+    const normalizeEmail = email.trim().toLowerCase();
     //Find existing user
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({ email: normalizeEmail });
     if (existingUser) {
       return res.status(409).json({
         success: false,
