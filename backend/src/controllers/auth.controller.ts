@@ -6,13 +6,22 @@ import { env } from "../config/env.js";
 
 export const register = async (req: Request, res: Response) => {
   try {
-    const { name, email, password } = req.body;
+    const {
+      name,
+      phone,
+      email,
+      password,
+      studentClass,
+      stream,
+      location,
+      role,
+    } = req.body;
 
-    //Check empty fields
-    if (!name || !email || !password) {
+    // Check required fields
+    if (!name || !email || !password || !studentClass || !stream) {
       return res.status(400).json({
         success: false,
-        message: "All feilds are required.",
+        message: "Name, email, password, class and stream are required.",
       });
     }
     //Find existing user
@@ -39,6 +48,11 @@ export const register = async (req: Request, res: Response) => {
       name,
       email,
       password: hashedPassword,
+      phone,
+      studentClass,
+      stream,
+      location,
+      role,
     });
 
     //Generate Token
@@ -53,6 +67,11 @@ export const register = async (req: Request, res: Response) => {
         id: user._id,
         name: user.name,
         email: user.email,
+        phone: user.phone,
+        studentClass: user.studentClass,
+        stream: user.stream,
+        location: user.location,
+        role: user.role,
       },
     });
   } catch (error) {
