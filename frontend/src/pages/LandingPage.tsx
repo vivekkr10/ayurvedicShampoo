@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import studentProfileImg from "../assets/images/student-img.webp";
 import "../style/LandingPage.css";
 import heroBanner from "../assets/images/hero-banner.webp";
@@ -22,7 +22,16 @@ import lifeAtCga1 from "../assets/images/life-at-cga1.webp";
 import lifeAtCga2 from "../assets/images/life-at-cga2.webp";
 import lifeAtCga3 from "../assets/images/life-at-cga3.webp";
 
+import LocomotiveScroll from "locomotive-scroll";
+
 const LandingPage = () => {
+  useEffect(() => {
+    const scroll = new LocomotiveScroll();
+
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
   return (
     <div>
       <main>

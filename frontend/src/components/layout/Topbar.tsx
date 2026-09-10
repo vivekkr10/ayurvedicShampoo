@@ -11,7 +11,7 @@ const Topbar = () => {
         <Outlet />
       </main>
 
-      <Toaster position="bottom-center"/>
+      <Toaster position="bottom-center" />
     </div>
   );
 };

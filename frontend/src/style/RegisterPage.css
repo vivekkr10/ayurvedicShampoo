@@ -79,6 +79,10 @@
   line-height: 1.1;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 /* =========================================
    BANNER CONTENT
 ========================================= */
@@ -317,8 +321,9 @@
   padding: 20px 50px 0 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   background-color: #f7f9f373;
+  gap: 10px;
 }
 
 .back-btn {
@@ -346,38 +351,175 @@
   justify-content: center;
 }
 
-.form-row{
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #9c9c9c;
+  padding: 10px;
+  border-radius: 10px;
+  color: #3f3f3f;
+  width: 100%;
+}
+
+label svg {
+  height: 16px !important;
+  width: 16px !important;
+  color: #686868 !important;
+}
+
+input {
+  color: #3f3f3f;
+  outline: none;
+  width: 100%;
+}
+
+select {
+  outline: none;
+}
+
+.register-submit-btn {
+  width: 100%;
+}
+
+/* =========================================
+   PAGES DROPDOWN
+========================================= */
+
+.pages-dropdown {
+  position: relative;
+  display: none;
+}
+
+.pages-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffffff;
+}
+
+.pages-arrow {
+  font-size: 15px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+/* =========================================
+   DROPDOWN MENU
+========================================= */
+
+.pages-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  min-width: 150px;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+  z-index: 1000;
+}
+
+/* Dropdown links */
+
+.pages-dropdown-menu li {
+  width: 100%;
+}
+
+.pages-dropdown-menu li a {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  color: #3f3f3f;
+  text-decoration: none;
+  border-radius: 7px;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Dropdown item hover */
+
+.pages-dropdown-menu li a:hover {
+  background-color: var(--color-lime-light);
+  color: var(--color-dark-green);
+}
+
+/* =========================================
+   SHOW DROPDOWN ON HOVER
+========================================= */
+
+.pages-dropdown:hover .pages-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+.pages-dropdown:hover .pages-arrow {
+  transform: rotate(180deg);
+}
+
+/* =========================================
+   TABLET / SMALL DESKTOP
+   1024px - 1230px
+========================================= */
+
+@media (min-width: 1024px) and (max-width: 1230px) {
+  /* Show Pages dropdown */
+  .pages-dropdown {
+    display: block;
+  }
+
+  /* Keep normal navigation visible */
+  .nav-btns {
     display: flex;
     align-items: center;
-    gap: 10px;
-    width: 100%;
-}
+  }
 
-.form-group{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #9C9C9C;
-    padding: 10px;
-    border-radius: 10px;
-    color: #3f3f3f;
-    width: 100%;
-}
+  /* Slightly reduce spacing */
+  .nav-btns ul {
+    gap: 18px;
+  }
 
-label svg{
-    height: 16px !important;
-    width: 16px !important;
-    color: #686868 !important;
-}
+  /* Pages button */
+  .pages-btn {
+    font-size: 14px;
+  }
 
-input{
-    color: #3f3f3f;
-    outline: none;
-    width: 100%;
-}
+  /* Register button */
+  .nav-register-btn {
+    white-space: nowrap;
+  }
 
-.register-submit-btn{
-    width: 100%;
+  .display {
+    display: none;
+  }
 }
 /* =========================================
    TABLET / SMALL DESKTOP
@@ -423,11 +565,118 @@ input{
 }
 
 /* =========================================
-   HIDE ON TABLET / MOBILE
+   TABLET / MOBILE - 1023px AND BELOW
 ========================================= */
 
 @media (max-width: 1023px) {
-  .register-page {
+  /* Hide left banner */
+  .register-banner-wrap {
     display: none;
+  }
+
+  /* Full-width form area */
+  .register-form-wrap {
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 100vh;
+
+    padding: 20px 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #f7f9f3;
+
+    gap: 20px;
+  }
+
+  /* Back button stays at the top */
+  .back-btn {
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  /* Form card */
+  .form-wrapper {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 30px 40px;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .register-form {
+    width: 100%;
+  }
+
+  .form-row {
+    width: 100%;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .nav-btns {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .span {
+    border: 1px solid #ffffff;
+  }
+}
+/* =========================================
+   MOBILE - 767px AND BELOW
+========================================= */
+
+@media (max-width: 767px) {
+  .register-form-wrap {
+    padding: 15px 20px 30px;
+  }
+
+  .back-btn {
+    max-width: 100%;
+  }
+
+  .form-wrapper {
+    max-width: 100%;
+
+    padding: 25px 20px;
+
+    border-radius: 15px;
+  }
+
+  /*
+     Stack two-column form rows
+     Example:
+     First Name + Last Name
+     ↓
+     First Name
+     Last Name
+  */
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group {
+    padding: 11px;
   }
 }
