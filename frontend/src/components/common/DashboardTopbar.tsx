@@ -20,12 +20,12 @@ const DashboardTopbar = () => {
             </div>
             <div className="profile-dropdown-wrapper">
               <Bell className="notification-bell" />
-              <div className="profile-dropdown">
+              <div
+                className="profile-dropdown"
+                onClick={() => setIsOpen((prev) => !prev)}
+              >
                 {/* <Link to={`/${userId}/profile`}> */}
-                <div
-                  className="profile-icon-wrapper"
-                  onClick={() => setIsOpen((prev) => !prev)}
-                >
+                <div className="profile-icon-wrapper">
                   <img src={profileIcon} alt="Name" />
                 </div>
                 <div className="name-wrapper">
