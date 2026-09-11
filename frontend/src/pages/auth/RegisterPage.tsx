@@ -7,7 +7,6 @@ import expert from "../../assets/images/svg/expert.svg";
 import better from "../../assets/images/svg/better.svg";
 import bulb from "../../assets/images/svg/bulb.svg";
 import priority from "../../assets/images/svg/priority.svg";
-import learnGrow from "../../assets/images/svg/learn-grow.svg";
 import boy from "../../assets/images/boy.webp";
 import axios, { isAxiosError } from "axios";
 import { toast, Toaster } from "sonner";
@@ -641,13 +640,26 @@ const RegisterPage = () => {
                     SUBMIT
                 ========================== */}
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="register-submit-btn btn-bg-green"
-                >
-                  {loading ? "Creating Account..." : "Register now"}
-                </button>
+                <div className="register-btn">
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="register-submit-btn btn-bg-green"
+                  >
+                    {loading ? "Creating Account..." : "Register now"}
+                  </button>
+                  <div className="divider">
+                    <span className="hr-line"></span>
+                    <p>or</p>
+                    <span className="hr-line"></span>
+                  </div>
+                  <p className="login-text">
+                    Already have an account?{" "}
+                    <Link to={"/login"} className="deep-sea-green">
+                      Login Here
+                    </Link>
+                  </p>
+                </div>
               </form>
             </div>
           </div>
@@ -661,4 +673,3 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
-  

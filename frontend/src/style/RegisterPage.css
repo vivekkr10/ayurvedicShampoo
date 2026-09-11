@@ -29,20 +29,13 @@
 
 .register-banner-wrap {
   position: relative;
-
   width: 100%;
   max-width: 44%;
-
-  height: 100vh;
+  /* height: 100vh; */
   min-height: 700px;
-
-  padding: 20px 0 0 50px;
-
-  background-color: #f7f9f3;
-
+  padding: 20px 0 0 0;
   display: flex;
   flex-direction: column;
-
   gap: 25px;
 
   /* overflow: hidden; */
@@ -59,6 +52,11 @@
   gap: 10px;
 
   flex-shrink: 0;
+  padding-left: 50px;
+}
+
+.register-banner-wrap .left-gap {
+  padding-left: 50px;
 }
 
 .logo {
@@ -95,6 +93,7 @@
   flex-direction: column;
 
   gap: 18px;
+  padding-left: 50px;
 }
 
 .register-head {
@@ -141,8 +140,8 @@
 }
 
 .register-icon-img {
-  width: 46px;
-  height: 46px;
+  width: 56px;
+  height: 56px;
 
   padding: 12px;
 
@@ -322,7 +321,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  background-color: #f7f9f373;
   gap: 10px;
 }
 
@@ -385,142 +383,25 @@ select {
   outline: none;
 }
 
+.register-btn {
+  width: 100%;
+}
 .register-submit-btn {
   width: 100%;
 }
 
-/* =========================================
-   PAGES DROPDOWN
-========================================= */
-
-.pages-dropdown {
-  position: relative;
-  display: none;
-}
-
-.pages-btn {
-  border: none;
-  background: transparent;
-  padding: 0;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
+.register-btn {
+  width: 100%;
   display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #ffffff;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
 }
 
-.pages-arrow {
-  font-size: 15px;
-  line-height: 1;
-  transition: transform 0.2s ease;
+.login-text {
+  text-align: center;
 }
 
-/* =========================================
-   DROPDOWN MENU
-========================================= */
-
-.pages-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 15px);
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  min-width: 150px;
-  margin: 0;
-  padding: 8px;
-  list-style: none;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease,
-    visibility 0.25s ease;
-  z-index: 1000;
-}
-
-/* Dropdown links */
-
-.pages-dropdown-menu li {
-  width: 100%;
-}
-
-.pages-dropdown-menu li a {
-  display: block;
-  width: 100%;
-  padding: 10px 14px;
-  color: #3f3f3f;
-  text-decoration: none;
-  border-radius: 7px;
-  white-space: nowrap;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
-
-/* Dropdown item hover */
-
-.pages-dropdown-menu li a:hover {
-  background-color: var(--color-lime-light);
-  color: var(--color-dark-green);
-}
-
-/* =========================================
-   SHOW DROPDOWN ON HOVER
-========================================= */
-
-.pages-dropdown:hover .pages-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-
-  transform: translateX(-50%) translateY(0);
-}
-
-.pages-dropdown:hover .pages-arrow {
-  transform: rotate(180deg);
-}
-
-/* =========================================
-   TABLET / SMALL DESKTOP
-   1024px - 1230px
-========================================= */
-
-@media (min-width: 1024px) and (max-width: 1230px) {
-  /* Show Pages dropdown */
-  .pages-dropdown {
-    display: block;
-  }
-
-  /* Keep normal navigation visible */
-  .nav-btns {
-    display: flex;
-    align-items: center;
-  }
-
-  /* Slightly reduce spacing */
-  .nav-btns ul {
-    gap: 18px;
-  }
-
-  /* Pages button */
-  .pages-btn {
-    font-size: 14px;
-  }
-
-  /* Register button */
-  .nav-register-btn {
-    white-space: nowrap;
-  }
-
-  .display {
-    display: none;
-  }
-}
 /* =========================================
    TABLET / SMALL DESKTOP
 ========================================= */

@@ -4,6 +4,7 @@ import type { Request, Response } from "express";
 import jwt from "jsonwebtoken";
 import { env } from "../config/env.js";
 
+// register controller
 export const register = async (req: Request, res: Response) => {
   try {
     const {
@@ -79,6 +80,62 @@ export const register = async (req: Request, res: Response) => {
     });
   } catch (error) {
     console.log("Register Error: ", error);
+    res.status(500).json({
+      success: false,
+      message: "Server error",
+    });
+  }
+};
+
+// login controller
+export const login = async (req: Request, res: Response) => {
+  try {
+    const { email, password } = req.body;
+
+    // Validate input
+    if (!email || !password) {
+      return res.status(400).json({
+        success: false,
+        message: "Email and password are required",
+      });
+    }
+
+    // Find user
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid email or password",
+      });
+    }
+
+    // compare password
+    const isPasswordVaild = await bcrypt.compare(password, user.password);
+    if (!isPasswordVaild) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid email or password",
+      });
+    }
+
+    // JWT Create
+    const token = jwt.sign({ id: user._id }, env.JWT_SECRET, {
+      expiresIn: "7d",
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "Login successfull",
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+      },
+    });
+  } catch (error) {
+    console.log("Login error", error);
+
     res.status(500).json({
       success: false,
       message: "Server error",

@@ -396,7 +396,7 @@
 .life-at-cga {
   min-width: 0;
   display: grid;
-  grid-template-columns: minmax(190px, 0.8fr) minmax(300px, 1.2fr);
+  grid-template-columns: minmax(190px, 0.8fr) minmax(200px, 1.2fr);
   grid-template-rows: auto auto auto;
   column-gap: clamp(25px, 4vw, 55px);
   align-items: center;
@@ -743,7 +743,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .cga-wrapper {
     grid-template-columns: 1fr 1fr;
     gap: clamp(30px, 5vw, 50px);
@@ -798,10 +798,6 @@
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    padding-bottom: 50px;
-  }
-
   .hero-wrap {
     flex-direction: column;
     padding: 40px 0 70px;
@@ -854,6 +850,29 @@
     flex-direction: column;
     align-items: stretch;
     gap: clamp(45px, 8vw, 65px);
+  }
+
+  .life-at-cga {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+  .life-at-cga-content,
+  .tuition-banner {
+    width: 100%;
+    grid-column: auto;
+  }
+  .life-at-cga-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tuition-banner {
+    margin-top: 0;
+  }
+  .tuition-img {
+    max-width: 100%;
   }
 
   .life-at-cga-content {

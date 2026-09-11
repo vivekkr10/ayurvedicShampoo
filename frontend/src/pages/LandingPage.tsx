@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import studentProfileImg from "../assets/images/student-img.webp";
 import "../style/LandingPage.css";
 import heroBanner from "../assets/images/hero-banner.webp";
@@ -25,13 +26,20 @@ import lifeAtCga3 from "../assets/images/life-at-cga3.webp";
 import LocomotiveScroll from "locomotive-scroll";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/dashboard", { replace: true });
+      return;
+    }
+
     const scroll = new LocomotiveScroll();
 
     return () => {
       scroll.destroy();
     };
-  }, []);
+  }, [navigate]);
   return (
     <div>
       <main>

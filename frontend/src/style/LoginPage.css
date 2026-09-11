@@ -1,0 +1,50 @@
+.forgor-password {
+  width: 100%;
+  text-align: end;
+}
+
+.login-button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.divider .hr-line {
+  border: 1px solid #00000048;
+  width: 100%;
+}
+
+.google-icon-img {
+  height: 24px;
+  width: 24px;
+}
+
+.login-google {
+  background-color: #ffffff;
+  border: 1px solid #00000048;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 26px;
+  border-radius: 15px;
+  font-size: clamp(14px, 1.2vw, 17px);
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}

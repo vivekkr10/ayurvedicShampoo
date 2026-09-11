@@ -1,96 +1,135 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import "../../style/header.css";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const PageHeader = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPagesOpen, setIsPagesOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setIsPagesOpen(false);
+  };
+
   return (
-    <div>
-      <header className="header">
-        <div className="container">
-          <div className="header-wrapper">
-            <div className="logo-wrapper">
-              <div className="logo">
-                <img src={logo} alt="Commerce Gyan Academy" />
-              </div>
+    <header className="header">
+      <div className="container">
+        <div className="header-wrapper">
 
-              <h2 className="leaf-green logo-text">
-                Commerce Gyan <br /> Academy
-              </h2>
+          {/* ================= LOGO ================= */}
+          <Link to="/" className="logo-wrapper" onClick={closeMenu}>
+            <div className="logo">
+              <img src={logo} alt="Commerce Gyan Academy" />
             </div>
 
-            <div className="hamburger-menu">
-              <span className="span"></span>
-              <span className="span"></span>
-              <span className="span"></span>
-            </div>
+            <h2 className="leaf-green logo-text">
+              Commerce Gyan <br />
+              Academy
+            </h2>
+          </Link>
 
-            <nav className="nav-btns">
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
+          {/* ================= HAMBURGER ================= */}
+          <button
+            className="hamburger-menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
 
-                <li>
-                  <Link to="/about">About Us</Link>
-                </li>
+          {/* ================= NAVIGATION ================= */}
+          <nav className={`nav-btns ${isMenuOpen ? "active" : ""}`}>
+            <ul>
 
-                {/* Pages Dropdown */}
-                <li className="pages-dropdown">
-                  <button className="pages-btn">
-                    Pages
-                    <span className="pages-arrow">⌄</span>
-                  </button>
+              {/* HOME */}
+              <li>
+                <Link to="/" onClick={closeMenu}>
+                  Home
+                </Link>
+              </li>
 
-                  <ul className="pages-dropdown-menu">
+              {/* ABOUT */}
+              <li>
+                <Link to="/about" onClick={closeMenu}>
+                  About Us
+                </Link>
+              </li>
+
+              {/* RESULTS */}
+              <li>
+                <Link to="/results" onClick={closeMenu}>
+                  Results
+                </Link>
+              </li>
+
+              {/* ================= DROPDOWN ================= */}
+              <li
+                className={`hover-dropdown ${
+                  isPagesOpen ? "dropdown-active" : ""
+                }`}
+              >
+                <button
+                  className="pages-btn"
+                  onClick={() => setIsPagesOpen(!isPagesOpen)}
+                  aria-expanded={isPagesOpen}
+                >
+                  <span>Pages</span>
+
+                  <ChevronDown
+                    size={18}
+                    className={isPagesOpen ? "rotate-icon" : ""}
+                  />
+                </button>
+
+                <div className="dropdown-wrapper">
+                  <ul className="dropdown">
+
                     <li>
-                      <Link to="/courses">Courses</Link>
+                      <Link to="/courses" onClick={closeMenu}>
+                        Courses
+                      </Link>
                     </li>
 
                     <li>
-                      <Link to="/faculty">Faculty</Link>
+                      <Link to="/faculty" onClick={closeMenu}>
+                        Faculty
+                      </Link>
                     </li>
 
                     <li>
-                      <Link to="/results">Results</Link>
+                      <Link to="/admissions" onClick={closeMenu}>
+                        Admissions
+                      </Link>
                     </li>
+
                   </ul>
-                </li>
-                <li>
-                  <Link to="/courses" className="display">
-                    Courses
-                  </Link>
-                </li>
+                </div>
+              </li>
 
-                <li>
-                  <Link to="/faculty" className="display">
-                    Faculty
-                  </Link>
-                </li>
+              {/* CONTACT */}
+              <li>
+                <Link to="/contact" onClick={closeMenu}>
+                  Contact
+                </Link>
+              </li>
 
-                <li>
-                  <Link to="/results" className="display">
-                    Results
-                  </Link>
-                </li>
+            </ul>
 
-                <li>
-                  <Link to="/admissions">Admissions</Link>
-                </li>
+            {/* ================= REGISTER BUTTON ================= */}
+            <Link
+              to="/register"
+              className="nav-register-btn btn"
+              onClick={closeMenu}
+            >
+              <span>Register now</span>
+            </Link>
+          </nav>
 
-                <li>
-                  <Link to="/contact">Contact</Link>
-                </li>
-              </ul>
-
-              <button className="nav-register-btn btn">
-                <Link to="/register">Register now</Link>
-              </button>
-            </nav>
-          </div>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
 
