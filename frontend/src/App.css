@@ -10,3 +10,15 @@
     padding: 0 50px;
   }
 }
+.dash-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@media (max-width:768px){
+  .dash-container{
+    padding: 0 15px;
+  }
+}

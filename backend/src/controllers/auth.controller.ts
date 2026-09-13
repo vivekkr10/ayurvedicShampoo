@@ -101,7 +101,7 @@ export const login = async (req: Request, res: Response) => {
     }
 
     // Find user
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+password");
     if (!user) {
       return res.status(401).json({
         success: false,
@@ -110,6 +110,8 @@ export const login = async (req: Request, res: Response) => {
     }
 
     // compare password
+    // console.log("Login password: ", password);
+    // console.log("Hashed login password: ", user?.password);
     const isPasswordVaild = await bcrypt.compare(password, user.password);
     if (!isPasswordVaild) {
       return res.status(401).json({

@@ -361,10 +361,10 @@
   align-items: center;
   gap: 10px;
   border: 1px solid #9c9c9c;
-  padding: 10px;
   border-radius: 10px;
   color: #3f3f3f;
   width: 100%;
+  padding-left: 10px;
 }
 
 label svg {
@@ -373,14 +373,21 @@ label svg {
   color: #686868 !important;
 }
 
+.input-wrapper {
+  width: 100%;
+}
+
 input {
   color: #3f3f3f;
   outline: none;
+  padding: 10px;
   width: 100%;
 }
 
 select {
   outline: none;
+  width: 98%;
+  padding: 10px;
 }
 
 .register-btn {
