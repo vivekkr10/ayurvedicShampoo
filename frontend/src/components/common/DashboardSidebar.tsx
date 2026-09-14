@@ -7,12 +7,10 @@ import {
   Bell,
   BookOpen,
   ChartColumn,
-  ChevronDown,
   ClipboardList,
   FileText,
   House,
   MessageCircle,
-  Search,
   UserRound,
   Video,
 } from "lucide-react";
