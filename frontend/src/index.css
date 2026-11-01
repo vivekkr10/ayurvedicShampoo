@@ -220,6 +220,14 @@ p {
   }
 }
 
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+  color: var(--color-deep-green);
+}
+
 /* ==============================
    Responsive
 ================================= */
