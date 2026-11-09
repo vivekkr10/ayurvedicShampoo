@@ -5,20 +5,35 @@
   margin: 0 auto;
 }
 
-@media (max-width:768px){
-  .container{
+@media (max-width: 768px) {
+  .container {
     padding: 0 50px;
   }
 }
-.dash-container {
+
+/* SWIPER CUSTOM STYLING */
+
+.product-main-swiper {
   width: 100%;
-  max-width: 1440px;
-  padding: 0 30px;
-  margin: 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-@media (max-width:768px){
-  .dash-container{
-    padding: 0 15px;
-  }
+.product-main-swiper .swiper-slide {
+  overflow: hidden;
+}
+
+.product-thumbs-swiper .swiper-slide {
+  opacity: 0.65;
+  transition: opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.product-thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.product-thumbs-swiper .swiper-slide-thumb-active > div {
+  outline: 2px solid #09251b;
+  outline-offset: -2px;
 }
